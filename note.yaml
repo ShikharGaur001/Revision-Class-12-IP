@@ -1,0 +1,31 @@
+# Python Virtual Environment Setup Guide for VSCode
+
+virtual_environment_setup:
+  overview: "Create and configure a Python virtual environment in VSCode"
+  
+  step_1_create_venv:
+    description: "Create a virtual environment in your project directory"
+    command: "python -m venv venv"
+    explanation: "This creates a folder named 'venv' with isolated Python packages"
+    
+  step_2_activate_venv:
+    windows: "venv\\Scripts\\activate"
+    mac_linux: "source venv/bin/activate"
+    result: "Your terminal will show (venv) prefix when activated"
+    
+  step_3_configure_interpreter_in_vscode:
+    method: "Use Command Palette"
+    steps:
+      - "Press Ctrl+Shift+P (Cmd+Shift+P on Mac)"
+      - "Type: Python: Select Interpreter"
+      - "Choose the path ending with: ./venv/Scripts/python.exe (Windows)"
+      - "Or: ./venv/bin/python (Mac/Linux)"
+    alternative: "Click interpreter version in bottom right of VSCode status bar"
+    
+  step_4_install_packages:
+    install_both_together: "pip install pandas matplotlib"
+    
+  notes:
+    - "Always activate venv before installing packages"
+    - "VSCode will auto-detect and use configured interpreter"
+    - "Each project should have its own venv for dependency isolation"
