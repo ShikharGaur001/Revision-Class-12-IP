@@ -5,7 +5,7 @@ virtual_environment_setup:
   
   step_1_create_venv:
     description: "Create a virtual environment in your project directory"
-    command: "python -m venv venv"
+    command: "python -m venv .venv"
     explanation: "This creates a folder named 'venv' with isolated Python packages"
     
   step_2_activate_venv:
